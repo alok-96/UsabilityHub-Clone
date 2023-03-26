@@ -54,6 +54,7 @@ li{
     max-width: 1250px;
     margin-inline: auto; /* to center */
     padding-inline: var(--padding-inline-section);
+    overflow: hidden;
 }
 
 .flex{
@@ -124,6 +125,7 @@ li{
 .nav-bar{
     margin-top: 25px;
     justify-content: space-between;    
+    position: relative;
 }
 
 .menu{
@@ -133,6 +135,10 @@ li{
 .menu ul {
     justify-content: space-between;
     gap: 10px;
+}
+
+.nav-toggle{
+    display: none;
 }
 
 /* Header */
@@ -155,7 +161,7 @@ header{
 
 /* Companies Section */
 .companies-section{
-    padding: 40px 0px 0px 40px;
+    padding-inline: var(--padding-inline-section);
 }
 
 .small-text{
@@ -165,7 +171,9 @@ header{
 }
 
 .company-image-section{
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 /* Feature Section */
@@ -186,14 +194,14 @@ header{
 .features-area{
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 40px;
+    gap: 20px;
     padding-inline: 40px;
 }
 
 .features-card{
     flex-direction: column;
     gap: 20px;
-    width: 25%;
+    width: 30%;
     text-align: center;
 }
 
@@ -205,6 +213,10 @@ header{
 
 .big-feature{
     gap: 60px;
+}
+
+#big-feature-mid{
+    flex-direction:row-reverse;
 }
 
 .big-feature-img img{
@@ -233,7 +245,7 @@ header{
 /* Example Section */
 .example-section{
     margin-top: 30px;
-    padding: 60px var(--padding-inline-section) 0px;
+    padding: 60px 0px 0px 0px;
 }
 
 .example-section-header{
@@ -248,11 +260,12 @@ header{
 .example-area{
     justify-content: space-between;
     padding-block: 20px;
+    flex-wrap: wrap;
 }
 
 .example-card{
     width: 23%;
-    min-height: 350px;
+    height: 350px;
     background-color: black;
     flex-direction: column-reverse;
     padding: 20px;
