@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
     <link rel="shortcut icon" href="assets/asset 42.png" type="image/x-icon">
     <title>UsabilityHub | User Research & Usability Testing Platform</title>
 </head>
@@ -29,7 +30,7 @@
                     Become a tester
                 </div>
             </a>
-            <div class="menu">
+            <div class="menu" id="menu-link">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Product</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -39,6 +40,9 @@
                     <li><a href="#" class="hover-link primary-btn">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <img src="./assets/asset 43.png" alt="" width="20px">
+            </a>
         </div>
     </div>
 
@@ -53,7 +57,7 @@
                 <a href="#" class="primary-btn">Get started</a>
             </div>
             <div class="header-right">
-                <img src="./assets/asset 2.png" alt="hero image" width="600px">
+                <img src="./assets/asset 2.png" alt="hero image" width="100%">
             </div>
 
         </div>
@@ -155,7 +159,7 @@
     </section>
 
     <section class="big-feature-section">
-        <div class="container flex big-feature" style="flex-direction:row-reverse;">
+        <div class="container flex big-feature" id="big-feature-mid">
             <div class="big-feature-img">
                 <img src="./assets/asset 21.png" alt="">
             </div>
@@ -235,9 +239,10 @@
 
     <!-- Penetest Section -->
     <div class="paneltest-section">
-        <div class="container flex">
+        <div class="paneltest-area container flex">
             <div class="paneltest-desc flex">
-                <h1>No participants? <br> No problem.</h1>
+                <h1>No participants?</h1> 
+                <h1>No problem.</h1>
                 <p>Our integrated panel allows you to quickly and affordably recruit research participants that
                     precisely match your target audience.
                 </p>
@@ -260,7 +265,7 @@
 
             </div>
             <div class="paneltest-img">
-                <img src="./assets/asset 40.png" alt="">
+                <img src="./assets/asset 40.png" alt="image">
             </div>
         </div>
 
@@ -332,6 +337,14 @@
         </div>
     </div>
 
+    <script>
+        const menuLink = document.getElementById('menu-link');
+        const toggleBtn = document.getElementById('nav-toggle');
+
+        toggleBtn.addEventListener('click', () => {
+            menuLink.classList.toggle('active');
+        })
+    </script>   
 
 
 
